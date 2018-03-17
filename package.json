@@ -1,0 +1,19 @@
+{
+  "name": "clippi",
+  "version": "1.0.0",
+  "description": "Easily build command line interface for REST APIs",
+  "main": "clippi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "CLI"
+  ],
+  "author": "Nick Steger",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.15.0"
+  }
+}
