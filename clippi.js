@@ -3,7 +3,6 @@
 'use strict';
 
 const program = require('commander');
-const util = require('./lib/util');
 const ClippiRequest = require('./lib/clippiRequest');
 
 program
@@ -30,7 +29,30 @@ program
     .command('register <firstname> <lastname> <username> <password>')
     .description('Create a new user')
     .action((firstname, lastname, username, password) => {
-        util.register(firstname, lastname, username, password);
+        let options = {
+            hostname: 'localhost',
+            port: '3000',
+            path: '/api/register',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        };
+        let cr = new ClippiRequest(options);
+        cr.setPostBody({
+            firstName: firstname,
+            lastName: lastname,
+            username: username,
+            password: password,
+            confirmPassword: password
+        });
+        cr.run((err, res) => {
+            if (err) {
+                console.log(err.message);
+            } else {
+                console.log(res);
+            }
+        });
     });
 
 if (process.argv.length < 3) {
