@@ -55,8 +55,8 @@ program
         });
     });
 
+// If no args are supplied, print program help
 if (process.argv.length < 3) {
-    // Not enough args
     program.help();
 }
 
