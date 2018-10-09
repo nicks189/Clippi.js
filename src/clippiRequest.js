@@ -1,5 +1,5 @@
 const url = require('url');
-const http = require('http');
+const https = require('https');
 const util = require('./util');
 
 // ClippiRequest class
@@ -14,8 +14,8 @@ var ClippiRequest = function (cmdstring, desc, options, fields) {
 };
 
 ClippiRequest.prototype.run =  function (callback) {
-    console.log(this);
-    const req = http.request(this.options, res => {
+    // console.log(this);
+    const req = https.request(this.options, res => {
         res.setEncoding(this.encoding);
         let raw = '';
         res.on('data', (chunk) => {

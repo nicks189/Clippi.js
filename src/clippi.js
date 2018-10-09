@@ -56,7 +56,7 @@ Clippi.prototype.setActionForRequest = function (cr, action) {
 };
 
 Clippi.prototype.run = function (argv) {
-    console.log(this);
+    // console.log(this);
     // If no args are supplied, run default action
     if (argv.length < 3) {
         this.defaultAction();
