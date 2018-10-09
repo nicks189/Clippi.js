@@ -3,7 +3,7 @@
 'use strict';
 
 const program = require('commander');
-const ClippiRequest = require('./lib/clippiRequest');
+const ClippiRequest = require('./src/clippiRequest');
 
 program
     .version('1.0.0', '-v, --version')

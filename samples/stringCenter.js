@@ -2,8 +2,8 @@
 
 'use strict';
 
-const ClippiRequest = require('../lib/clippiRequest');
-const Clippi = require('../lib/clippi');
+const ClippiRequest = require('../src/clippiRequest');
+const Clippi = require('../src/clippi');
 
 let clippi = new Clippi('StringCenter sample', '1.0.0');
 clippi.setDefaultAction(console.log("Hello World!"));
