@@ -13,7 +13,7 @@ clippi.setDefaultAction(function () { console.log("Hello World!") });
 
 let bacon = new ClippiRequest('bacon', 'Get some bacon from the interwebs',
     {
-        // https://baconipsum.com/api/?type=meat-and-filler
+        // https://baconipsum.com/api/?type=meat-and-filler&sentences=1
         hostname: 'baconipsum.com',
         path: '/api/?type=meat-and-filler&sentences=1',
         method: 'GET',
