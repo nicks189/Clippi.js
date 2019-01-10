@@ -23,7 +23,7 @@ let bacon = new ClippiRequest('bacon', 'Get some bacon from the interwebs',
     {
         // https://baconipsum.com/api/?type=meat-and-filler
         hostname: 'baconipsum.com',
-        path: '/api/?type=meat-and-filler',
+        path: '/api/?type=meat-and-filler&sentences=1',
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -35,6 +35,12 @@ clippi.addRequest(bacon);
 
 Use your CLI
 
+```shell
+$ ./sampleCLI.js bacon
+Response object: 
+[ 'Flank rump sint bresaola.' ]
+
+```
 
 See samples folder for additional information.
 
