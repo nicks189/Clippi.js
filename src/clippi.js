@@ -29,6 +29,7 @@ Clippi.prototype.addRequest = function (cmd, desc, options, fields) {
                 if (err) {
                     console.log(err.message);
                 } else {
+                    console.log('Response object: ');
                     console.log(res);
                 }
             });
